@@ -1,0 +1,70 @@
+{
+  "metric": "RMSSD",
+  "implementation": "src/metrics/rmssd.mjs",
+  "definition": "Task Force ESC/NASPE, Circulation 93(5):1043-1065, 1996",
+  "ranAt": "2026-10-16T14:14:22.270Z",
+  "environment": {
+    "node": "v24.13.1",
+    "python": "3.14.3",
+    "numpy": "2.4.4",
+    "neurokit2": "unavailable: ModuleNotFoundError: No module named 'neurokit2'"
+  },
+  "toleranceRelative": 1e-9,
+  "verdict": {
+    "agreesWithNumpy": true,
+    "agreesWithNeurokit2": "not run: neurokit2 unavailable"
+  },
+  "scope": "Validates that the implementation computes the published RMSSD definition correctly. It does NOT validate agreement with WHOOP-reported HRV, which is a windowed, preprocessed value; that requires authorized reference observations (blocker B3).",
+  "cases": [
+    {
+      "name": "rsa-modulated-rest-5min",
+      "beats": 301,
+      "js": 54.811435319397184,
+      "numpy": 54.811435319397184,
+      "relErrVsNumpy": 0,
+      "neurokit2": null,
+      "relErrVsNeurokit2": null,
+      "neurokit2Error": null
+    },
+    {
+      "name": "noisy-70bpm-400beats",
+      "beats": 400,
+      "js": 45.79166370302328,
+      "numpy": 45.79166370302328,
+      "relErrVsNumpy": 0,
+      "neurokit2": null,
+      "relErrVsNeurokit2": null,
+      "neurokit2Error": null
+    },
+    {
+      "name": "exercise-150bpm-600beats",
+      "beats": 600,
+      "js": 4.869262030438656,
+      "numpy": 4.869262030438656,
+      "relErrVsNumpy": 0,
+      "neurokit2": null,
+      "relErrVsNeurokit2": null,
+      "neurokit2Error": null
+    },
+    {
+      "name": "high-variability-50bpm-300beats",
+      "beats": 300,
+      "js": 120.24651367195769,
+      "numpy": 120.24651367195769,
+      "relErrVsNumpy": 0,
+      "neurokit2": null,
+      "relErrVsNeurokit2": null,
+      "neurokit2Error": null
+    },
+    {
+      "name": "alternating-closed-form",
+      "beats": 200,
+      "js": 49.8046875,
+      "numpy": 49.8046875,
+      "relErrVsNumpy": 0,
+      "neurokit2": null,
+      "relErrVsNeurokit2": null,
+      "neurokit2Error": null
+    }
+  ]
+}

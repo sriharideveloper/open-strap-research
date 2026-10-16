@@ -1,0 +1,34 @@
+{
+  "name": "open-strap-research",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Dependency-free toolkit for Bluetooth heart-rate data: standard BLE HRS parsing, idempotent SQLite store, and tested HRV, sleep and training-load metrics with provenance. Not affiliated with WHOOP, Inc.",
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "demo": "node tools/demo-end-to-end.mjs",
+    "validate:rmssd": "node tools/validate-rmssd/run.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "heart-rate",
+    "hrv",
+    "rmssd",
+    "dfa-alpha1",
+    "bluetooth",
+    "ble",
+    "heart-rate-service",
+    "0x2a37",
+    "sleep-regularity-index",
+    "respiratory-rate",
+    "trimp",
+    "training-load",
+    "wearable",
+    "whoop",
+    "quantified-self",
+    "sqlite",
+    "provenance"
+  ],
+  "license": "MIT"
+}

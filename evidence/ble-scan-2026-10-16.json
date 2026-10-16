@@ -1,0 +1,41 @@
+{
+  "watcher": "STATUS Started",
+  "scannedAt": "2026-10-16T19:31:31+05:30",
+  "seconds": 25,
+  "devicesSeen": 3,
+  "heartRateAdvertisers": 0,
+  "whoopCandidates": 0,
+  "devices": [
+    {
+      "address": "redacted-1",
+      "names": "",
+      "advertisements": 42,
+      "rssiMedian": -48,
+      "heartRateService": false,
+      "whoopServiceMatch": "",
+      "nameMentionsWhoop": false,
+      "serviceUuids": "0000fe78-0000-1000-8000-00805f9b34fb"
+    },
+    {
+      "address": "redacted-2",
+      "names": "<redacted>",
+      "advertisements": 2,
+      "rssiMedian": -72,
+      "heartRateService": false,
+      "whoopServiceMatch": "",
+      "nameMentionsWhoop": false,
+      "serviceUuids": ""
+    },
+    {
+      "address": "redacted-3",
+      "names": "<redacted>",
+      "advertisements": 13,
+      "rssiMedian": -80,
+      "heartRateService": false,
+      "whoopServiceMatch": "",
+      "nameMentionsWhoop": false,
+      "serviceUuids": ""
+    }
+  ],
+  "redaction": "Addresses and local names of nearby third-party devices removed before commit. Counts, RSSI, flags and advertised service UUIDs retained."
+}
