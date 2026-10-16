@@ -2,18 +2,26 @@ name: test
 
 on:
   push:
+    branches: [main]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        node: [22, 24]
+        node: ['22', '24']
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - run: npm test
-      - run: node tools/demo-end-to-end.mjs :memory:
+      - name: Unit and property tests
+        run: npm test
+      - name: End-to-end demo on fixture data
+        run: node tools/demo-end-to-end.mjs :memory:
